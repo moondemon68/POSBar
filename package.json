@@ -1,0 +1,25 @@
+{
+  "name": "posbar",
+  "version": "1.0.0",
+  "description": "POSBar",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moondemon68/POSBar.git"
+  },
+  "author": "JAVVA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moondemon68/POSBar/issues"
+  },
+  "homepage": "https://github.com/moondemon68/POSBar#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security"
+  }
+}
