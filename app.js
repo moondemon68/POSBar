@@ -22,7 +22,7 @@ var users = {
 };
 
 // READ FILES
-fs.readFile('users.json','utf8',function (err,data) {
+fs.readFile('database/users.json','utf8',function (err,data) {
     if (err) {
         console.log(err);
     } else {
@@ -33,7 +33,7 @@ fs.readFile('users.json','utf8',function (err,data) {
 // HOME PAGE
 app.get("/",function(req,res) {
     var json = JSON.stringify(users);
-    fs.writeFile('users.json',json,'utf8',function(req,res) {
+    fs.writeFile('database/users.json',json,'utf8',function(req,res) {
         console.log(json);
     });
     if (accessLevel === 0) res.render("login");
@@ -55,6 +55,13 @@ app.post("/login",function(req,res) {
     console.log(currentUser,accessLevel);
     res.redirect("/");
 });
+
+// LOGOUT
+app.get("/logout",function(req,res) {
+    currentUser="";
+    accessLevel=0;
+    res.redirect("/");
+})
 
 // REGISTER NEW USERS
 app.get("/register",function(req,res) {
