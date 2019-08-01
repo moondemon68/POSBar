@@ -14,6 +14,7 @@ app.use(express.static("public"));
 
 // VARIABLES
 var accessLevel = 0;
+var currentUser = "";
 var users = {
     username: [],
     password: [],
@@ -40,6 +41,19 @@ app.get("/",function(req,res) {
     else if (accessLevel === 2) res.render("supervisor");
     else if (accessLevel === 3) res.render("admin");
     else res.render("404");
+});
+
+// LOGIN
+app.post("/login",function(req,res) {
+    for (var i=0;i<users.username.length;i++) {
+        if (users.username[i] === req.body.username && users.password[i] === req.body.password) {
+            currentUser = req.body.username;
+            accessLevel = users.level[i];
+            break;
+        }
+    }
+    console.log(currentUser,accessLevel);
+    res.redirect("/");
 });
 
 // REGISTER NEW USERS
