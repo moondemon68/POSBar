@@ -1,10 +1,17 @@
 <%- include("partials/header") -%>
 
-<h1>LOGIN PAGE</h1>
-<form action="/login" method="post">
-    Username: <input type="text" name="username" placeholder="Username"> <br>
-    Password: <input type="password" name="password" placeholder="Password"> <br>
-    <button type="submit">Login</button> 
-</form>
+<div class='row'>
+    <div class='col-sm-1 kolom_kiri'>
+        ini kiri
+    </div>
+    <div class='col-sm-11 div_crisbar'>
+        <img src='https://raw.githubusercontent.com/moondemon68/POSBar/master/public/images/logo%20crisbar%20ifx.jpg' alt='logo_crisbar' class='logo_crisbar'>
+        <form action="/login" method="post">
+            <input type="text" name="username" placeholder="Username"> <br>
+            <input type="password" name="password" placeholder="Password"> <br>
+            <button type="submit" class="btn btn-warning login_button"><strong>LOGIN</strong></button>
+        </form>
+    </div>
+</div>
 
 <%- include("partials/footer") -%>

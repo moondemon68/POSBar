@@ -1,0 +1,35 @@
+.login_button {
+    top : 65%;
+    left : 45%;
+    width : 10%;
+    height : 10%;
+    position : absolute;
+}
+
+.btn-warning {
+    background-color : darkorange;
+    border-color : darkorange;
+}
+
+.btn-warning:hover {
+    background-color : orange;
+    border-color : orange;  
+}
+
+.logo_crisbar {
+    height : 30%;
+    width : 20%;
+    top : 30%;
+    left : 40%;
+    position : absolute;
+}
+
+.div_crisbar {
+    background-color : #992122;
+    height : 100vh;
+}
+
+.kolom_kiri {
+    background-color: coral;
+}
+
