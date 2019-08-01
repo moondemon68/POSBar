@@ -19,7 +19,7 @@
 .logo_crisbar {
     height : 30%;
     width : 20%;
-    top : 30%;
+    top : 10%;
     left : 40%;
     position : absolute;
 }
@@ -32,4 +32,3 @@
 .kolom_kiri {
     background-color: coral;
 }
-
