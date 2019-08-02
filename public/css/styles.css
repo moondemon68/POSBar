@@ -1,9 +1,16 @@
 .login_button {
     top : 65%;
-    left : 45%;
+    left : 38%;
     width : 10%;
     height : 10%;
     position : absolute;
+}
+.lapor_button {
+  top : 65%;
+  left : 52%;
+  width : 10%;
+  height : 10%;
+  position : absolute;
 }
 
 .btn-warning {

@@ -1,22 +1,25 @@
 <%- include("partials/header") -%>
-<div class="back"></div>
-<div class='register_judul'><h1 class="header_register">REGISTER PAGE</h1></div>
+<div class='jumbotron'>
+    <h1 class="header_register">REGISTER</h1>
+</div>
 <div>
-<form action="/register" method="post" id="register">
-    <div class = "border_lengkung">
-        <div class="dalam_border_lengkung">
-            Username: <input name="username" type="text" placeholder="Username"> <br><br>
-            Password: <input name="password" type="password" placeholder="Password"> <br><br>
-            Access Type: 
-            <select name="level">
-                <option value="1">Cashier</option>
-                <option value="2">Supervisor</option>
-                <option value="3">Admin</option>
-            </select>
-            <br>
+    <form action="/register" method="post" id="register">
+        <div class="border_lengkung">
+            <div class="dalam_border_lengkung">
+                Username: <input name="username" type="text" placeholder="Username"> <br><br>
+                Password: <input name="password" type="password" placeholder="Password"> <br><br>
+                Access Type:
+                <select name="level">
+                    <option value="1">Cashier</option>
+                    <option value="2">Supervisor</option>
+                    <option value="3">Admin</option>
+                </select>
+                <br>
+            </div>
         </div>
-    </div>
-    <div><button type="submit" class="btn-warning logo_regis">Register</button></form></div>
+        <div><button type="submit" class="btn-warning logo_regis">Register</button>
+    </form>
+</div>
 </form>
 </div>
 
