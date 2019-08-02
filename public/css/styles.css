@@ -71,3 +71,52 @@
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
+  .register_judul {
+    top : 2%;
+    position : absolute;
+    width : 100vw;
+  }
+
+  .header_register {
+    text-align : center;
+    font-family : georgia;
+  }
+
+  .border_lengkung {
+    border: 2px solid darkorange;
+    outline-color: darkorange;
+    position : absolute;
+    height : 50vh;
+    width : 60vw;
+    top : 20%;
+    left : 20%;
+    border-radius : 25px;
+    text-align : center;
+    background-color: white;
+  }
+
+  .dalam_border_lengkung {
+    position : relative;
+    top : 30%;
+  }
+  
+  .logo_regis {
+    position : absolute;
+    height : 10%;
+    width : 16%;
+    border : 2px solid darkorange;
+    border-radius : 25px;
+    top : 80%;
+    left : 42%;
+    font-family: 'Tahoma';
+    color : black;
+    font-size : 1.8vw;
+  }
+
+  .back {
+    position : absolute;
+    z-index : -1;
+    width : 100vw;
+    height : 100vh;
+  }
