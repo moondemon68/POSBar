@@ -1,37 +1,5 @@
 <%- include("partials/header") -%>
 
-<div class='row'>
-    <div class='col-sm-0 kolom_kiri'>
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
-        </div>
-
-        <span style="font-size:30px;cursor:pointer;padding-left: 30px" onclick="openNav()">&#9776;</span>
-
-        <script>
-            function openNav() {
-                document.getElementById("mySidenav").style.width = "250px";
-            }
-
-            function closeNav() {
-                document.getElementById("mySidenav").style.width = "0";
-            }
-        </script>
-    </div>
-    <div class='col-sm-12 div_crisbar'>
-        <img src='https://raw.githubusercontent.com/moondemon68/POSBar/master/public/images/logo%20crisbar%20ifx.jpg'
-            alt='logo_crisbar' class='logo_crisbar'>
-        <form action="/login" method="post"
-            style="margin:0 auto;width:75%;text-align:center;top : 50%;padding-top : 23%">
-            <input type="text" name="username" placeholder="Username"> <br>
-            <input type="password" name="password" placeholder="Password"> <br>
-            <button type="submit" class="btn btn-warning login_button"><strong>LOGIN</strong></button>
-        </form>
-    </div>
-</div>
+<h1>ADMIN</h1>
 
 <%- include("partials/footer") -%>

@@ -1,7 +1,7 @@
 <%- include("partials/header") -%>
 
 <div class='row'>
-  <div class='col-sm-0 kolom_kiri'>
+  <div class='col-sm-2 kolom_kiri'>
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <h1>Menu</h1>
@@ -11,7 +11,7 @@
 
     <script>
       function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("mySidenav").style.width = "16.66%";
       }
 
       function closeNav() {
@@ -19,16 +19,25 @@
       }
     </script>
   </div>
-  <div class='col-sm-12 div_crisbar'>
-    <img src='images/logo%20crisbar%20ifx.jpg' alt='logo_crisbar' class='logo_crisbar'>
-    <form action="/login" method="post" style="margin:0 auto;width:75%;text-align:center;top : 50%;padding-top : 23%">
-      <input type="text" name="username" placeholder="Username" required autofocus> <br>
-      <input type="password" name="password" placeholder="Password" required> <br>
-      <button type="submit" class="btn btn-warning login_button"><strong>LOGIN</strong></button>
-    </form>
-    <form action="/lapor" method="get">
-      <button type="submit" class="btn btn-warning lapor_button"><strong>LAPOR</strong></button>
-    </form>
+  <div class='col-sm-10 div_crisbar'>
+    <table class="table" style="color:white;">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nama Pelapor</th>
+          <th scope="col">Laporan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (var i = 0; i < reports.pelapor.length; i++) { %>
+        <tr>
+          <th scope="row"><%= i+1 %></td>
+          <td><%= reports.pelapor[i] %></td>
+          <td><%= reports.laporan[i] %></td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
   </div>
 </div>
 

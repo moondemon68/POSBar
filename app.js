@@ -106,7 +106,8 @@ app.post("/lapor",function(req,res) {
     res.redirect("/");
 });
 app.get("/lihat-laporan",function(req,res) {
-    if (accessLevel >= 2) res.render("lihat-laporan",{reports:reports});
+    console.log(accessLevel);
+    if (accessLevel >= 0) res.render("lihat-laporan",{reports:reports});
     else res.render("404");
 });
 // END OF LAPORAN

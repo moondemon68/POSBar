@@ -1,14 +1,17 @@
 <%- include("partials/header") -%>
 
 <div class='row'>
-  <div class='col-sm-12 div_crisbar'>
-    <img src='images/logo%20crisbar%20ifx.jpg' alt='logo_crisbar' class='logo_crisbar'>
-    <form action="/lapor" method="post" style="margin:0 auto;width:75%;text-align:center;top : 50%;padding-top : 23%">
-      <input type="text" name="username" placeholder="Username"> <br>
-      <input type="password" name="password" placeholder="Password"> <br>
-      <button type="submit" class="btn btn-warning login_button"><strong>LOGIN</strong></button>
-    </form>
-  </div>
+    <div class='col-sm-12 div_crisbar'>
+        <img src='images/logo%20crisbar%20ifx.jpg' alt='logo_crisbar' class='logo_crisbar'>
+        <form action="/lapor" method="post"
+            style="margin:0 auto;width:75%;text-align:center;top : 50%;padding-top : 23%">
+            <label for="pelapor" class="yellow_color">Nama pelapor:</label> <br>
+            <input type="text" name="pelapor" placeholder="Nama" id="pelapor"> <br> <br>
+            <label for="laporan" class="yellow_color">Laporan:</label> <br>
+            <textarea name="laporan" cols="30" rows="5" id="laporan"></textarea> <br> <br>
+            <button class="btn btn-lg btn-warning">Submit</button>
+        </form>
+    </div>
 </div>
 
 <%- include("partials/footer") -%>
