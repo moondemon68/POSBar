@@ -1,0 +1,43 @@
+<%- include("partials/header") -%>
+
+<div class='row'>
+    <div class='col-sm-0 kolom_kiri'>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+          </div>
+        
+          <span style="font-size:30px;cursor:pointer;padding-left: 30px" onclick="openNav()">&#9776;</span>
+        
+          <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+          }
+        
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+          }
+          </script>
+    </div>
+    <div class='col-sm-12 div_crisbar'>
+        <img src='https://raw.githubusercontent.com/moondemon68/POSBar/master/public/images/logo%20crisbar%20ifx.jpg' alt='logo_crisbar' class='logo_crisbar'>
+        <form action="/lapor" method="post" style="margin:0 auto;width:75%;text-align:center;top : 50%;padding-top : 23%">
+            <div class="form-group">
+                <label for="name">Nama:</label>
+                <input type="text" name="nama" placeholder="Nama pelapor" id="nama">
+                <label for="comment">Laporan:</label>
+                <textarea class="form-control" rows="5" placeholder="Laporan" id="comment"></textarea>
+            </div>
+        </form>
+        <form >
+            <input type="text" name="nama" placeholder="Username"> <br>
+            <input type="text" name="alasan" placeholder="Password"> <br>
+            <button type="submit" class="btn btn-warning login_button"><strong>LOGIN</strong></button>
+        </form>
+    </div>
+</div>
+
+<%- include("partials/footer") -%>

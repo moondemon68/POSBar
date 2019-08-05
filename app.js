@@ -75,6 +75,11 @@ app.post("/register",function(req,res) {
     res.redirect("/");
 }); 
 
+// REPORT 
+app.post("/lapor",function(req,res) {
+    res.render("lapor");
+});
+
 // WIPE DATABASE
 app.get("/wipe",function(req,res) {
     users = {
