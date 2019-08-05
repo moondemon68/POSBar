@@ -1,73 +1,144 @@
 .login_button {
-    top : 65%;
-    left : 45%;
-    width : 10%;
-    height : 10%;
-    position : absolute;
+  top: 65%;
+  left: 38%;
+  width: 10%;
+  height: 10%;
+  position: absolute;
+}
+
+.lapor_button {
+  top: 65%;
+  left: 52%;
+  width: 10%;
+  height: 10%;
+  position: absolute;
 }
 
 .btn-warning {
-    background-color : darkorange;
-    border-color : darkorange;
+  background-color: darkorange;
+  border-color: darkorange;
 }
 
 .btn-warning:hover {
-    background-color : orange;
-    border-color : orange;  
+  background-color: orange;
+  border-color: orange;
 }
 
 .logo_crisbar {
-    height : 30%;
-    width : 20%;
-    top : 14%;
-    left : 40%;
-    position : absolute;
+  height: 30%;
+  width: 20%;
+  top: 14%;
+  left: 40%;
+  position: absolute;
+}
+
+.yellow_color {
+  color: yellow;
 }
 
 .div_crisbar {
-    background-color : #992122;
-    height : 100vh;
+  background-color: #992122;
+  height: 100vh;
 }
 
 .kolom_kiri {
-    background-color : #992122;
+  background-color: #992122;
+  height: 100vh;
+}
+
+.login_form {
+  margin: 30% 45% 30%;
 }
 
 .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
   }
-  
+
   .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+    font-size: 18px;
   }
-  
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
-  
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
+}
+
+.register_judul {
+  top: 2%;
+  position: absolute;
+  width: 100vw;
+}
+
+.header_register {
+  text-align: center;
+  font-family: georgia;
+}
+
+.border_lengkung {
+  border: 2px solid darkorange;
+  outline-color: darkorange;
+  position: absolute;
+  height: 50vh;
+  width: 60vw;
+  top: 20%;
+  left: 20%;
+  border-radius: 25px;
+  text-align: center;
+  background-color: white;
+}
+
+.dalam_border_lengkung {
+  position: relative;
+  top: 30%;
+}
+
+.logo_regis {
+  position: absolute;
+  height: 10%;
+  width: 16%;
+  border: 2px solid darkorange;
+  border-radius: 25px;
+  top: 80%;
+  left: 42%;
+  font-family: 'Tahoma';
+  color: black;
+  font-size: 1.8vw;
+}
+
+.back {
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+}

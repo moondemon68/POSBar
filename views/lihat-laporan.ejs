@@ -20,15 +20,24 @@
     </script>
   </div>
   <div class='col-sm-10 div_crisbar'>
-    <img src='images/logo%20crisbar%20ifx.jpg' alt='logo_crisbar' class='logo_crisbar'>
-    <form action="/login" method="post" class="login_form">
-      <input type="text" name="username" placeholder="Username" required autofocus> <br>
-      <input type="password" name="password" placeholder="Password" required> <br>
-      <button type="submit" class="btn btn-warning login_button"><strong>LOGIN</strong></button>
-    </form>
-    <form action="/lapor" method="get">
-      <button type="submit" class="btn btn-warning lapor_button"><strong>LAPOR</strong></button>
-    </form>
+    <table class="table" style="color:white;">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nama Pelapor</th>
+          <th scope="col">Laporan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (var i = 0; i < reports.pelapor.length; i++) { %>
+        <tr>
+          <th scope="row"><%= i+1 %></td>
+          <td><%= reports.pelapor[i] %></td>
+          <td><%= reports.laporan[i] %></td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
   </div>
 </div>
 

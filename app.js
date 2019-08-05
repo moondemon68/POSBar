@@ -20,6 +20,11 @@ var users = {
     password: [],
     level: []
 };
+var reports = {
+    pelapor: [],
+    laporan: []
+};
+// END OF VARIABLES
 
 // READ FILES
 fs.readFile('database/users.json','utf8',function (err,data) {
@@ -29,12 +34,24 @@ fs.readFile('database/users.json','utf8',function (err,data) {
         users = JSON.parse(data);
     }
 });
+fs.readFile('database/reports.json','utf8',function (err,data) {
+    if (err) {
+        console.log(err);
+    } else {
+        reports = JSON.parse(data);
+    }
+});
+// END OF READ FILES
 
 // HOME PAGE
 app.get("/",function(req,res) {
-    var json = JSON.stringify(users);
-    fs.writeFile('database/users.json',json,'utf8',function(req,res) {
-        console.log(json);
+    var jsonUsers = JSON.stringify(users);
+    fs.writeFile('database/users.json',jsonUsers,'utf8',function(req,res) {
+        console.log(jsonUsers);
+    });
+    var jsonReports = JSON.stringify(reports);
+    fs.writeFile('database/reports.json',jsonReports,'utf8',function(req,res) {
+        console.log(jsonReports);
     });
     if (accessLevel === 0) res.render("login");
     else if (accessLevel === 1) res.render("cashier");
@@ -42,6 +59,7 @@ app.get("/",function(req,res) {
     else if (accessLevel === 3) res.render("admin");
     else res.render("404");
 });
+// END OF HOME PAGE
 
 // LOGIN
 app.post("/login",function(req,res) {
@@ -55,13 +73,15 @@ app.post("/login",function(req,res) {
     console.log(currentUser,accessLevel);
     res.redirect("/");
 });
+// END OF LOGIN
 
 // LOGOUT
 app.get("/logout",function(req,res) {
     currentUser="";
     accessLevel=0;
     res.redirect("/");
-})
+});
+// END OF LOGOUT
 
 // REGISTER NEW USERS
 app.get("/register",function(req,res) {
@@ -74,7 +94,25 @@ app.post("/register",function(req,res) {
     users.level.push(Number(req.body.level));
     res.redirect("/");
 }); 
+// END OF REGISTER
 
+// LAPORAN
+app.get("/lapor",function(req,res) {
+    res.render("lapor");
+});
+app.post("/lapor",function(req,res) {
+    reports.pelapor.push(req.body.pelapor);
+    reports.laporan.push(req.body.laporan);
+    res.redirect("/");
+});
+app.get("/lihat-laporan",function(req,res) {
+    console.log(accessLevel);
+    if (accessLevel >= 0) res.render("lihat-laporan",{reports:reports});
+    else res.render("404");
+});
+// END OF LAPORAN
+
+<<<<<<< HEAD
 // REPORT 
 app.post("/lapor",function(req,res) {
     res.render("lapor");
@@ -82,6 +120,10 @@ app.post("/lapor",function(req,res) {
 
 // WIPE DATABASE
 app.get("/wipe",function(req,res) {
+=======
+// WIPERS
+app.get("/wipe-users",function(req,res) {
+>>>>>>> 127c8a1889e91e59ae5cd757680e8d06d4926836
     users = {
         username: [],
         password: [],
@@ -89,6 +131,7 @@ app.get("/wipe",function(req,res) {
     };
     res.redirect("/");
 });
+// END OF WIPERS
 
 app.listen(3000, function() {
   console.log("Server started on port 3000");
